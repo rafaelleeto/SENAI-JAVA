@@ -7,12 +7,13 @@ public class Gerenciamento {
     public static void Gerenciamento(){
         Scanner scanner=new Scanner(System.in);
         int opcao=0;
-        opcao = scanner.nextInt();
         do {
             System.out.println("Bem vindo ao gerenciamento de produtos");
             System.out.println("1- Adicionar produtos");
             System.out.println("2- Exibir produtos");
             System.out.println("3- Remover produto");
+            opcao = scanner.nextInt();
+
 
             if (opcao==1){
                 Adicionar();
@@ -24,12 +25,12 @@ public class Gerenciamento {
             }
 
             if (opcao==3){
+                Remover();
 
             }
 
         }while (opcao!=0);
     }
-
 
     public static void Mostrar(){
         for (int i = 0; i < lista.size(); i++) {
